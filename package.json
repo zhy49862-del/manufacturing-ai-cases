@@ -1,0 +1,16 @@
+{
+  "name": "mfg-fde-scenario-library",
+  "version": "0.1.0",
+  "private": true,
+  "description": "制造业 FDE 场景库 —— 问题自检 · 案例查看 · 制造业企业 Agent 架构与优化（零依赖静态站）",
+  "scripts": {
+    "serve": "node tools/serve.js",
+    "test": "node tools/test.js"
+  },
+  "devDependencies": {
+    "jsdom": "^30.1.2"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

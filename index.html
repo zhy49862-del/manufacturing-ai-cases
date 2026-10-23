@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>制造业企业AI化转型</title>
+<meta name="description" content="从交期、库存、报价、质量等具体问题出发，了解制造业 AI 应用的切入点，一起梳理一条可验证的试点流程。">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="hdr">
+  <div class="hdr-in">
+    <h1 id="h1">制造业企业AI化转型</h1>
+    <p class="sub" id="sub"></p>
+    <details class="reference-summary"><summary>浏览范围与参考材料</summary><div class="src" id="src"></div></details>
+  </div>
+  <nav class="tabs">
+    <button class="tab on" data-sec="cases-view" data-sub="find-panel">问题自检和案例查看</button>
+  </nav>
+</header>
+
+<main class="wrap">
+
+  <section class="sec on" id="cases-view">
+    <div id="list-view">
+
+
+
+      <nav class="subnav" id="subnav">
+        <button class="sbtn on" data-panel="find-panel">
+          <b>问题检索</b><span>识别企业 AI 应用需求，通过案例了解 AI 能做什么、企业可以从哪里开始。</span>
+        </button>
+        <button class="sbtn" data-panel="cases-panel">
+          <b>案例查看</b><span>参考制造业 AI 应用案例，了解实施路径与业务价值。</span>
+        </button>
+      </nav>
+
+      <!-- ══════ 板块一：问题检索 ══════ -->
+      <div class="spanel on" id="find-panel">
+
+        <div class="grp-h" style="margin-bottom:14px">
+          <h2>识别业务问题，明确试点条件</h2>
+          <p>选择岗位，补充生产方式、问题频率与数据基础，形成初步核查建议；再查看具体业务方案、参考依据和实施路径。</p>
+        </div>
+        <div id="wizard"></div>
+
+        <div class="grp-h" style="margin-top:48px">
+          <h2>全部问题卡 <span>25 个操作级问题域</span></h2>
+          <p>按「问题」组织，不按「技术」组织。每张卡都对齐到工单号、缺口数量、人审闸门这一层。</p>
+        </div>
+        <div class="grid" id="pgrid"></div>
+
+        <details class="research-details"><summary>延伸阅读：现场表达与问题地图</summary>
+        <div class="grp-h" style="margin-top:24px">
+          <h2>一线原话语料库 <span id="pstat"></span></h2>
+          <p>上面每张问题卡的证据来源。213 条抱怨出自 299 个开源仓库，按 23 组排列，每条都标了出处仓库和语料等级
+             （<b>A</b> 真实一手口吻、<b>B</b> 书面材料倒推、<b>C</b> 合成样例）—— 对外引用时务必区分。</p>
+        </div>
+        <div class="fbar" id="pfbar"></div>
+        <div id="pgroups"></div>
+
+        <div class="grp-h" style="margin-top:48px">
+          <h2>问题域地图 <span>40 个问题域 · 附现成技术方案</span></h2>
+        </div>
+        <div class="panel2" id="pdomains"></div>
+        </details>
+
+      </div>
+
+      <!-- ══════ 板块二：案例查看 ══════ -->
+      <div class="spanel" id="cases-panel">
+
+        <div class="grp-h">
+          <h2>企业应用参考案例 <span id="cstat"></span></h2>
+          <p>先看遇到了什么问题、采取了什么做法，再判断哪些经验适合您的企业。以下为公开资料整理的参考案例。</p>
+          <p class="warnline">⚠ 注意粒度：这些是<b>组织级 / 平台级</b>的做法（整套数据底座、全员 AI 采用）。
+             要找「这一个缺料怎么解」，请回「问题检索」。</p>
+        </div>
+        <p class="case-source-scope">资料覆盖说明：49条案例中43条来自Datawhale与Palantir，包含制造、贸易、零售等行业，不代表全行业覆盖；效果数字以原来源披露及验证情况为准。</p>
+        <div class="fbar" id="cfbar"></div>
+        <div class="grid" id="cg"></div>
+
+        <div class="grp-h" style="margin-top:48px">
+          <h2>操作级场景样板</h2>
+          <p>来自「老周原创｜企业AI落地」的场景卡片转写 —— <b>脱敏材料，未公开公司名与量化结果</b>。
+             价值在于粒度：具体到工单号、缺口数量，以及<b>人审闸门</b>与<b>未闭环</b>的划法。</p>
+        </div>
+        <div class="fbar" id="sfbar"></div>
+        <div class="grid" id="sg"></div>
+
+      </div>
+
+    </div>
+    <div id="detail-view" class="detail hidden"></div>
+  </section>
+
+
+  <details class="reference-footer"><summary>参考资料与内容说明</summary><p class="foot" id="foot"></p></details>
+</main>
+
+<dialog class="consult-dialog" id="consult-dialog" aria-labelledby="consult-title">
+  <div class="consult-top"><span>企业 AI 转型咨询</span><button type="button" id="consult-close" aria-label="关闭咨询窗口">关闭</button></div>
+  <h2 id="consult-title">先聊清楚一件具体的事</h2>
+  <p id="consult-context"></p>
+  <label for="consult-message">把这段话带给我，也可以补充您的情况</label>
+  <textarea id="consult-message" rows="5"></textarea>
+  <div class="consult-actions"><button class="action primary" id="consult-copy" type="button">复制咨询内容</button></div>
+  <p id="consult-status" role="status" aria-live="polite"></p>
+  <div class="contact-person"><a href="tel:15314411115">15314411115</a><span>微信同号 · 可复制号码后添加微信</span></div>
+  <p class="consult-privacy">内容仅保留在当前页面，复制后由您自行发送。</p>
+</dialog>
+
+<script src="data/pains.js"></script>
+<script src="data/problems.js"></script>
+<script src="data/cases.js"></script>
+<script src="data/scenarios.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
